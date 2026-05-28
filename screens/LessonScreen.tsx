@@ -130,7 +130,7 @@ export default function LessonScreen({ route, navigation }: Props) {
         </View>
       </View>
 
-      <View style={styles.exerciseContainer}>
+      <View key={exerciseIndex} style={styles.exerciseContainer}>
         {renderExercise(currentExercise, handleAnswer, result)}
       </View>
 

@@ -249,10 +249,10 @@ export default function LessonScreen({ route, navigation }: Props) {
 function renderExercise(ex: Exercise, onAnswer:(c:boolean)=>void, result:ResultState) {
   const h = result !== 'none' ? () => {} : onAnswer;
   switch (ex.type) {
-    case 'multipleChoice': return <MultipleChoice exercise={ex} onAnswer={h}/>;
-    case 'matchPairs':     return <MatchPairs exercise={ex} onAnswer={h}/>;
-    case 'tapWords':       return <TapWords exercise={ex} onAnswer={h}/>;
-    case 'translate':      return <TranslateExercise exercise={ex} onAnswer={h}/>;
+    case 'multipleChoice': return <MultipleChoice key={ex.id} exercise={ex} onAnswer={h}/>;
+    case 'matchPairs':     return <MatchPairs key={ex.id} exercise={ex} onAnswer={h}/>;
+    case 'tapWords':       return <TapWords key={ex.id} exercise={ex} onAnswer={h}/>;
+    case 'translate':      return <TranslateExercise key={ex.id} exercise={ex} onAnswer={h}/>;
     default: return null;
   }
 }

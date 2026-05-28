@@ -146,10 +146,7 @@ export default function HomeScreen({ navigation }: Props) {
 
       {/* ── HEADER ── */}
       <View style={styles.header}>
-        <View style={styles.headerLeft}>
-          <Text style={styles.flag}>🇵🇰</Text>
-          <Text style={styles.lang}>URDU</Text>
-        </View>
+        <View style={styles.headerLeft}/>
         <View style={styles.headerRight}>
           {/* Streak with animated flame */}
           <View style={styles.pill}>
